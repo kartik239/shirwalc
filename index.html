@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirwal Circle — One Circle. Every Local Business.</title>
+  <meta name="description" content="Browse and contact local services in Shirwal — doctors, tiffin, laundry, repair, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="vendors.html">Services</a>
+        <a href="account.html" data-auth="logged-in">Account</a>
+        <a href="login.html" data-auth="logged-out">Login</a>
+        <button data-logout data-auth="logged-in">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">⚡ Shirwal's Local Marketplace</div>
+      <h1>
+        <span class="stroke">ONE</span><br>
+        <span class="fill">CIRCLE.</span><br>
+        <span class="stroke">EVERY BIZ.</span>
+      </h1>
+      <p>Find trusted local services in Shirwal — doctors, tiffin, laundry, repairs and more. Connect instantly on WhatsApp.</p>
+      <div class="hero-cta">
+        <a href="vendors.html" class="btn btn-red">Explore All Services ↗</a>
+        <a href="#popular" class="btn btn-yellow">Popular Near You ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANEL STRIP -->
+  <div class="panel-strip">✦ Health · Home Services · Transport · Real Estate · Repairs · Food ✦</div>
+
+  <!-- CATEGORIES -->
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div class="section-title display">Browse by Category<span class="underline"></span></div>
+      <p class="section-sub">Jump to what you need in one tap.</p>
+      <div class="grid cat-grid">
+        <a href="vendors.html#health" class="manga-card cat-card">
+          <span class="cat-icon">🏥</span>
+          <h3>Health</h3>
+          <p>Doctors, salons & parlors</p>
+        </a>
+        <a href="vendors.html#home-services" class="manga-card cat-card">
+          <span class="cat-icon">🏠</span>
+          <h3>Home Services</h3>
+          <p>Repair, cleaning & more</p>
+        </a>
+        <a href="vendors.html#transport" class="manga-card cat-card">
+          <span class="cat-icon">🛺</span>
+          <h3>Transport</h3>
+          <p>Rides, tours & car care</p>
+        </a>
+        <a href="vendors.html" class="manga-card cat-card">
+          <span class="cat-icon">⭐</span>
+          <h3>All Services</h3>
+          <p>See everything available</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="panel-divider">
+
+  <!-- POPULAR SERVICES -->
+  <section class="section" id="popular">
+    <div class="container">
+      <div class="section-title display">Popular Services<span class="underline"></span></div>
+      <p class="section-sub">Most-contacted by Shirwal residents.</p>
+
+      <div class="grid vendor-grid">
+
+        <!-- Tiffin -->
+        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--accent)">
+          <div class="logo-wrap">
+            <img src="assets/logo-tiffin-services.svg" alt="Tiffin Services">
+          </div>
+          <h3>Tiffin Services</h3>
+          <p>Home-cooked meals delivered daily. Monthly plans available.</p>
+          <div class="speech-bubble" style="margin-bottom:0.75rem;font-size:0.78rem">🍱 Pickup &amp; delivery · Monthly sub</div>
+          <div class="actions">
+            <a class="btn btn-red" href="vendors.html?service=Tiffin%20Services#service-tiffin">Open Vendor</a>
+            <a class="btn btn-blue" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 Visit Website</a>
+          </div>
+          <a class="ext-link" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 mess.shirwal.in ↗</a>
+        </article>
+
+        <!-- Laundry -->
+        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--accent3)">
+          <div class="logo-wrap">
+            <img src="assets/logo-laundry.svg" alt="Laundry">
+          </div>
+          <h3>Laundry</h3>
+          <p>Wash, dry, fold, and ironing. Pickup and delivery available.</p>
+          <div class="speech-bubble blue" style="margin-bottom:0.75rem;font-size:0.78rem">🧺 Same-day available</div>
+          <div class="actions">
+            <a class="btn btn-blue" href="vendors.html?service=Laundry#service-laundry">Open Vendor</a>
+            <a class="btn btn-blue" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 Visit Website</a>
+          </div>
+          <a class="ext-link" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 laundry.shirwal.in ↗</a>
+        </article>
+
+        <!-- Rickshaw -->
+        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--yellow); border-top-color: #e6a200">
+          <div class="logo-wrap">
+            <img src="assets/logo-rickshaw.svg" alt="Rickshaw">
+          </div>
+          <h3>Rickshaw</h3>
+          <p>Quick, affordable local rides around Shirwal at any time.</p>
+          <div class="speech-bubble" style="margin-bottom:0.75rem;font-size:0.78rem">🛺 Available now · Instant booking</div>
+          <div class="actions">
+            <a class="btn btn-yellow" href="vendors.html?service=Rickshaw#service-rickshaw">Open Vendor</a>
+            <a class="btn btn-wa" href="https://wa.me/917066644476?text=Hello%2C%20I%20need%20a%20Rickshaw%20in%20Shirwal." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="panel-divider">
+
+  <!-- HOW IT WORKS -->
+  <section class="section" style="background: var(--paper2)">
+    <div class="container">
+      <div class="section-title display">How It Works<span class="underline"></span></div>
+      <p class="section-sub">Four panels. That's all it takes.</p>
+      <div class="how-grid">
+        <div class="manga-card how-card">
+          <div class="how-num">01</div>
+          <h3>Browse Services</h3>
+          <p>Explore all local services by category or search for what you need.</p>
+        </div>
+        <div class="manga-card how-card">
+          <div class="how-num">02</div>
+          <h3>View Details</h3>
+          <p>Tap "View Details" on any card to see info and contact options.</p>
+        </div>
+        <div class="manga-card how-card">
+          <div class="how-num">03</div>
+          <h3>WhatsApp Instantly</h3>
+          <p>Reach the provider directly with a pre-filled message. No typing needed.</p>
+        </div>
+        <div class="manga-card how-card">
+          <div class="how-num">04</div>
+          <h3>Get It Done</h3>
+          <p>Agree on time, price, and delivery — local, fast, and trusted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">Shirwal <span style="color:#fff">Circle</span></a>
+          <p>Your town's digital directory. Connecting Shirwal residents with trusted local businesses.</p>
+          <div class="social-row">
+            <a href="#" class="social-chip">Instagram</a>
+            <a href="#" class="social-chip">Facebook</a>
+            <a href="https://wa.me/917066644476" class="social-chip" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <strong>Quick Links</strong>
+          <a href="vendors.html">All Services</a>
+          <a href="login.html">Login</a>
+          <a href="account.html">My Account</a>
+          <a href="credentials.html">Admin</a>
+        </div>
+        <div class="footer-links">
+          <strong>Our Platforms</strong>
+          <a href="https://mess.shirwal.in" target="_blank" rel="noopener">mess.shirwal.in</a>
+          <a href="https://laundry.shirwal.in" target="_blank" rel="noopener">laundry.shirwal.in</a>
+          <a href="https://property.shirwal.in" target="_blank" rel="noopener">property.shirwal.in</a>
+          <a href="https://shopact.shirwal.in" target="_blank" rel="noopener">shopact.shirwal.in</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Shirwal Circle. Built with ❤️ for Shirwal.</p>
+    </div>
+  </footer>
+
+  <div class="toast" data-ui-toast></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

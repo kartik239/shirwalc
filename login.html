@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Shirwal Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="vendors.html">Services</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="min-height:80vh;display:flex;align-items:center">
+    <div class="container" style="max-width:420px">
+
+      <div class="manga-card card-pad" style="padding:2rem 2rem 2.5rem">
+        <div style="text-align:center;margin-bottom:1.75rem">
+          <div style="font-family:'Bangers',cursive;font-size:2.2rem;letter-spacing:0.05em;text-shadow:3px 3px 0 var(--accent);margin-bottom:0.3rem">
+            Shirwal Circle
+          </div>
+          <div class="speech-bubble" style="font-size:0.82rem">🔐 Sign in to your account</div>
+        </div>
+
+        <div id="loginError" class="error-box"></div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Email Address</label>
+            <input id="username" type="email" class="manga-input" placeholder="your@email.com" autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" class="manga-input" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-red" style="width:100%;padding:0.8rem;font-size:1rem;margin-top:0.5rem">Sign In ↗</button>
+        </form>
+
+        <p class="muted text-center mt-2" style="font-size:0.82rem">
+          Accounts are created by the admin. Contact us on WhatsApp for access.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="toast" data-ui-toast></div>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const user = JSON.parse(localStorage.getItem('shirwal_circle_user'));
+        if (user) location.href = 'account.html';
+      } catch {}
+    });
+  </script>
+</body>
+</html>

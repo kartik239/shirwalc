@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — Shirwal Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-requires-auth="true">
+
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="vendors.html">Services</a>
+        <a href="account.html" class="active" data-auth="logged-in">Account</a>
+        <button data-logout data-auth="logged-in">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container" style="max-width:560px">
+      <h1 class="section-title display" style="margin-bottom:2rem">My Account<span class="underline"></span></h1>
+
+      <div class="manga-card card-pad" style="margin-bottom:1.25rem">
+        <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem">
+          <div class="avatar" data-user-initial>R</div>
+          <div>
+            <div style="font-family:'Bangers',cursive;font-size:1.5rem;letter-spacing:0.04em" data-user-name>Loading…</div>
+            <span class="badge badge-green" style="margin-top:0.3rem">● Active</span>
+          </div>
+        </div>
+        <div class="info-row"><span class="lbl">Email</span><span data-user-email>—</span></div>
+        <div class="info-row"><span class="lbl">Phone</span><span data-user-phone>—</span></div>
+        <div class="info-row"><span class="lbl">Address</span><span data-user-address>—</span></div>
+      </div>
+
+      <div class="manga-card card-pad" style="margin-bottom:1.25rem">
+        <h2 style="font-size:1.2rem;margin-bottom:1rem">Quick Links</h2>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+          <a href="vendors.html" class="btn btn-red">Browse Services</a>
+        </div>
+      </div>
+
+      <button data-logout class="btn btn-white" style="border-color:var(--accent);color:var(--accent)">Sign Out</button>
+    </div>
+  </section>
+
+  <div class="toast" data-ui-toast></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
