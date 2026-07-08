@@ -3,7 +3,6 @@
 const KEY_USER = 'shirwal_circle_user';
 const WA_NUMBER = '917066644476';
 
-// ── USER ACCOUNTS (admin-managed) ───────────────────────────
 const USER_ACCOUNTS = [
   {
     username: 'demo@shirwalcircle.in',
@@ -14,102 +13,33 @@ const USER_ACCOUNTS = [
   }
 ];
 
-// ── SERVICE DATA ─────────────────────────────────────────────
 const SERVICES = {
-  'Doctor': {
-    desc: 'Consult with experienced local doctors. Home visits available on request.',
-    website: null
-  },
-  'Beauty Parlor': {
-    desc: 'Professional beauty and grooming services for women. Bridal packages available.',
-    website: null
-  },
-  'Salon': {
-    desc: 'Haircuts, styling, shaving, and grooming for men and kids.',
-    website: null
-  },
-  'Electrical Technician': {
-    desc: 'Wiring, repairs, switches, fans, and fittings. Call for a quick visit.',
-    website: null
-  },
-  'Plumbing Work': {
-    desc: 'Pipe repairs, tap fitting, drainage cleaning, and bathroom work.',
-    website: null
-  },
-  'Gas Mechanic': {
-    desc: 'Gas stove repair and cylinder connection services at your door.',
-    website: null
-  },
-  'Refrigerator Mechanic': {
-    desc: 'Fridge gas refilling, compressor repair, and cooling issues fixed fast.',
-    website: null
-  },
-  'TV/LED Mechanic': {
-    desc: 'Smart TV, LED panel, and set-top box repair at home.',
-    website: null
-  },
-  'Computer/Printer Technician': {
-    desc: 'Laptop, desktop, and printer repair with data recovery support.',
-    website: null
-  },
-  'Xerox & Printing at Doorstep': {
-    desc: 'Document printing and xerox at your door. Bulk orders welcome.',
-    website: null
-  },
-  'Pest Control': {
-    desc: 'Termite, cockroach, and general pest treatment for home and office.',
-    website: null
-  },
-  'Home Cleaning': {
-    desc: 'Full home deep cleaning by professional teams. Move-in/out specials.',
-    website: null
-  },
-  'House Shifting': {
-    desc: 'Safe and affordable shifting with packing service available.',
-    website: null
-  },
-  'Painting Works': {
-    desc: 'Interior and exterior painting with quality materials.',
-    website: null
-  },
-  'Laundry': {
-    desc: 'Wash, dry, fold, and ironing service. Pickup and delivery available.',
-    website: 'https://laundry.shirwal.in'
-  },
-  'Tiffin Services': {
-    desc: 'Fresh home-cooked meals delivered daily. Monthly subscription available.',
-    website: 'https://mess.shirwal.in'
-  },
-  'Real Estate & Properties': {
-    desc: 'Buy, sell, or rent property in Shirwal. Free consultation.',
-    website: 'https://property.shirwal.in'
-  },
-  'Rickshaw': {
-    desc: 'Local auto-rickshaw service for quick, affordable rides around Shirwal.',
-    website: null
-  },
-  'Tours & Travels': {
-    desc: 'Local sightseeing, outstation trips, and wedding vehicle packages.',
-    website: null
-  },
-  'Car Services': {
-    desc: 'Car wash, polishing, servicing, and minor repairs at your location.',
-    website: null
-  },
-  'Car Wash': {
-    desc: 'Hand wash, foam wash, and interior cleaning. Doorstep available.',
-    website: null
-  },
-  'Shop Act License': {
-    desc: 'Get your Shop Act License quickly with our expert assistance in Shirwal.',
-    website: 'https://shopact.shirwal.in'
-  }
+  'Doctor':                        { desc: 'Consult with experienced local doctors. Home visits available on request.', website: null, icon: 'logo-doctor' },
+  'Beauty Parlor':                 { desc: 'Professional beauty and grooming services for women. Bridal packages available.', website: null, icon: 'logo-beauty-parlor' },
+  'Salon':                         { desc: 'Haircuts, styling, shaving, and grooming for men and kids.', website: null, icon: 'logo-salon' },
+  'Electrical Technician':         { desc: 'Wiring, repairs, switches, fans, and fittings. Call for a quick visit.', website: null, icon: 'logo-electrical-technician' },
+  'Plumbing Work':                 { desc: 'Pipe repairs, tap fitting, drainage cleaning, and bathroom work.', website: null, icon: 'logo-plumbing-work' },
+  'Gas Mechanic':                  { desc: 'Gas stove repair and cylinder connection services at your door.', website: null, icon: 'logo-gas-mechanic' },
+  'Refrigerator Mechanic':         { desc: 'Fridge gas refilling, compressor repair, and cooling issues fixed fast.', website: null, icon: 'logo-refrigerator-mechanic' },
+  'TV/LED Mechanic':               { desc: 'Smart TV, LED panel, and set-top box repair at home.', website: null, icon: 'logo-tv-led-mechanic' },
+  'Computer/Printer Technician':   { desc: 'Laptop, desktop, and printer repair with data recovery support.', website: null, icon: 'logo-computer-printer-technician' },
+  'Xerox & Printing at Doorstep':  { desc: 'Document printing and xerox at your door. Bulk orders welcome.', website: null, icon: 'logo-xerox-printing-doorstep' },
+  'Pest Control':                  { desc: 'Termite, cockroach, and general pest treatment for home and office.', website: null, icon: 'logo-pest-control' },
+  'Home Cleaning':                 { desc: 'Full home deep cleaning by professional teams. Move-in/out specials.', website: null, icon: 'logo-home-cleaning' },
+  'House Shifting':                { desc: 'Safe and affordable shifting with packing service available.', website: null, icon: 'logo-house-shifting' },
+  'Painting Works':                { desc: 'Interior and exterior painting with quality materials.', website: null, icon: 'logo-painting-works' },
+  'Laundry':                       { desc: 'Wash, dry, fold, and ironing service. Pickup and delivery available.', website: 'https://laundry.shirwal.in', icon: 'logo-laundry' },
+  'Tiffin Services':               { desc: 'Fresh home-cooked meals delivered daily. Monthly subscription available.', website: 'https://mess.shirwal.in', icon: 'logo-tiffin-services' },
+  'Real Estate & Properties':      { desc: 'Buy, sell, or rent property in Shirwal. Free consultation.', website: 'https://property.shirwal.in', icon: 'logo-real-estate-properties' },
+  'Rickshaw':                      { desc: 'Local auto-rickshaw service for quick, affordable rides around Shirwal.', website: 'https://rickshaw.shirwal.in', icon: 'logo-rickshaw' },
+  'Tours & Travels':               { desc: 'Local sightseeing, outstation trips, and wedding vehicle packages.', website: null, icon: 'logo-tours-and-travels' },
+  'Car Services':                  { desc: 'Car wash, polishing, servicing, and minor repairs at your location.', website: null, icon: 'logo-car-services' },
+  'Car Wash':                      { desc: 'Hand wash, foam wash, and interior cleaning. Doorstep available.', website: null, icon: 'logo-car-wash' },
+  'Shop Act License':              { desc: 'Get your Shop Act License quickly with expert assistance in Shirwal.', website: 'https://shopact.shirwal.in', icon: 'logo-xerox-printing-doorstep' },
 };
 
-// ── USER HELPERS ─────────────────────────────────────────────
-function getUser() {
-  try { return JSON.parse(localStorage.getItem(KEY_USER)); } catch { return null; }
-}
+// ── USER ─────────────────────────────────────────────────────
+function getUser() { try { return JSON.parse(localStorage.getItem(KEY_USER)); } catch { return null; } }
 function setUser(u) { localStorage.setItem(KEY_USER, JSON.stringify(u)); }
 function clearUser() { localStorage.removeItem(KEY_USER); }
 function findAccount(u, p) { return USER_ACCOUNTS.find(a => a.username === u && a.password === p) || null; }
@@ -135,14 +65,13 @@ function requireAuth() {
   if (document.body.dataset.requiresAuth === 'true' && !getUser()) location.href = 'login.html';
 }
 
-// ── LOGOUT ────────────────────────────────────────────────────
 function bindLogout() {
   document.querySelectorAll('[data-logout]').forEach(btn => {
     btn.addEventListener('click', () => { clearUser(); location.href = 'index.html'; });
   });
 }
 
-// ── LOGIN FORM ────────────────────────────────────────────────
+// ── LOGIN ─────────────────────────────────────────────────────
 function bindLoginForm() {
   const form = document.getElementById('loginForm');
   if (!form) return;
@@ -153,11 +82,11 @@ function bindLoginForm() {
     const errEl = document.getElementById('loginError');
     const acc = findAccount(username, password);
     if (acc) { setUser(acc); location.href = 'account.html'; }
-    else { errEl.textContent = 'Incorrect email or password. Please try again.'; errEl.style.display = 'block'; }
+    else { errEl.textContent = 'Incorrect email or password.'; errEl.style.display = 'block'; }
   });
 }
 
-// ── ACCOUNT PAGE ──────────────────────────────────────────────
+// ── ACCOUNT ───────────────────────────────────────────────────
 function renderAccount() {
   const user = getUser();
   if (!user) return;
@@ -169,28 +98,31 @@ function renderAccount() {
   set('[data-user-address]', user.address);
 }
 
-// ── VENDOR POPUP ──────────────────────────────────────────────
+// ── POPUP ─────────────────────────────────────────────────────
 function openPopup(serviceName) {
   const modal = document.querySelector('[data-service-popup]');
   if (!modal) return;
-  const svc = SERVICES[serviceName] || { desc: 'Contact us for details and availability.', website: null };
+  const svc = SERVICES[serviceName] || { desc: 'Contact us for details.', website: null, icon: null };
   const msg = encodeURIComponent(`Hello, I need ${serviceName} in Shirwal. Please share availability and charges.`);
 
   modal.querySelector('[data-popup-title]').textContent = serviceName;
   modal.querySelector('[data-popup-copy]').textContent = svc.desc;
 
-  // WhatsApp — only show if no dedicated website
+  // Icon
+  const iconEl = modal.querySelector('[data-popup-icon]');
+  if (iconEl && svc.icon) iconEl.src = `assets/${svc.icon}.svg`;
+
+  // WhatsApp — hide if has website
   const waLink = modal.querySelector('[data-contact-link]');
   waLink.href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
   waLink.style.display = svc.website ? 'none' : 'inline-flex';
 
-  // Website button — only show if has a dedicated website
+  // Website button
   const webBtn = modal.querySelector('[data-web-link]');
   if (webBtn) {
     if (svc.website) {
       webBtn.href = svc.website;
       webBtn.style.display = 'inline-flex';
-      webBtn.textContent = '🌐 Visit Website';
     } else {
       webBtn.style.display = 'none';
     }
@@ -198,7 +130,7 @@ function openPopup(serviceName) {
 
   modal.removeAttribute('hidden');
   document.body.style.overflow = 'hidden';
-  showToast(`${serviceName} details opened!`);
+  showToast(`${serviceName} details opened`);
 }
 
 function closePopup() {
