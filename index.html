@@ -5,22 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shirwal Circle — One Circle. Every Local Business.</title>
   <meta name="description" content="Browse and contact local services in Shirwal — doctors, tiffin, laundry, repair, and more.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- BACKGROUND -->
+<div class="bg-canvas">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <!-- Decorative rings -->
+  <div class="ring" style="width:500px;height:500px;top:10%;left:-120px;opacity:0.04"></div>
+  <div class="ring" style="width:300px;height:300px;bottom:20%;right:-60px;opacity:0.05"></div>
+  <div class="ring" style="width:180px;height:180px;top:55%;left:40%;opacity:0.04"></div>
+</div>
+
+<div class="page-wrap">
+
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
-      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="vendors.html">Services</a>
-        <a href="account.html" data-auth="logged-in">Account</a>
-        <a href="login.html" data-auth="logged-out">Login</a>
-        <button data-logout data-auth="logged-in">Logout</button>
+      <div class="navbar-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-icon">⭕</div>
+          Shirwal Circle
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="vendors.html">Services</a>
+          <a href="account.html" data-auth="logged-in">Account</a>
+          <a href="login.html" data-auth="logged-out">Login</a>
+          <button data-logout data-auth="logged-in">Logout</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -28,104 +49,123 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-tag">⚡ Shirwal's Local Marketplace</div>
-      <h1>
-        <span class="stroke">ONE</span><br>
-        <span class="fill">CIRCLE.</span><br>
-        <span class="stroke">EVERY BIZ.</span>
-      </h1>
-      <p>Find trusted local services in Shirwal — doctors, tiffin, laundry, repairs and more. Connect instantly on WhatsApp.</p>
-      <div class="hero-cta">
-        <a href="vendors.html" class="btn btn-red">Explore All Services ↗</a>
-        <a href="#popular" class="btn btn-yellow">Popular Near You ↓</a>
+      <div class="hero-inner">
+
+        <div>
+          <div class="hero-eyebrow"><span class="dot"></span> Shirwal's Local Marketplace</div>
+          <h1>
+            One Circle.
+            <span class="line-grad">Every Local Business.</span>
+          </h1>
+          <p>Discover trusted local services in Shirwal — doctors, tiffin, repairs, transport and more. Connect instantly on WhatsApp.</p>
+          <div class="hero-cta">
+            <a href="vendors.html" class="btn btn-primary">Explore All Services</a>
+            <a href="#popular" class="btn btn-glass">Popular Near You ↓</a>
+          </div>
+        </div>
+
+        <!-- Circle visual -->
+        <div class="hero-visual">
+          <div class="circle-stack">
+            <div class="ring-outer"></div>
+            <div class="ring-mid"></div>
+            <div class="ring-inner"></div>
+            <div class="circle-center">⭕</div>
+            <!-- Satellite service icons -->
+            <div class="sat-circle sat-1">🍱</div>
+            <div class="sat-circle sat-2">🛺</div>
+            <div class="sat-circle sat-3">🏥</div>
+            <div class="sat-circle sat-4">🏠</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- PANEL STRIP -->
-  <div class="panel-strip">✦ Health · Home Services · Transport · Real Estate · Repairs · Food ✦</div>
-
   <!-- CATEGORIES -->
-  <section class="section" style="padding-top:3rem">
+  <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="section-title display">Browse by Category<span class="underline"></span></div>
-      <p class="section-sub">Jump to what you need in one tap.</p>
-      <div class="grid cat-grid">
-        <a href="vendors.html#health" class="manga-card cat-card">
-          <span class="cat-icon">🏥</span>
-          <h3>Health</h3>
+      <div class="section-label">Browse by Category</div>
+      <h2 class="section-title">What are you looking for?</h2>
+      <div class="cat-grid">
+
+        <a href="vendors.html#health" class="glass cat-card">
+          <div class="cat-orb orb-purple">🏥</div>
+          <h3>Health & Wellness</h3>
           <p>Doctors, salons & parlors</p>
         </a>
-        <a href="vendors.html#home-services" class="manga-card cat-card">
-          <span class="cat-icon">🏠</span>
+
+        <a href="vendors.html#home-services" class="glass cat-card">
+          <div class="cat-orb orb-cyan">🏠</div>
           <h3>Home Services</h3>
-          <p>Repair, cleaning & more</p>
+          <p>Repairs, cleaning & more</p>
         </a>
-        <a href="vendors.html#transport" class="manga-card cat-card">
-          <span class="cat-icon">🛺</span>
-          <h3>Transport</h3>
+
+        <a href="vendors.html#transport" class="glass cat-card">
+          <div class="cat-orb orb-green">🛺</div>
+          <h3>Transport & Travel</h3>
           <p>Rides, tours & car care</p>
         </a>
-        <a href="vendors.html" class="manga-card cat-card">
-          <span class="cat-icon">⭐</span>
+
+        <a href="vendors.html" class="glass cat-card">
+          <div class="cat-orb orb-amber">✨</div>
           <h3>All Services</h3>
           <p>See everything available</p>
         </a>
+
       </div>
     </div>
   </section>
-
-  <hr class="panel-divider">
 
   <!-- POPULAR SERVICES -->
   <section class="section" id="popular">
     <div class="container">
-      <div class="section-title display">Popular Services<span class="underline"></span></div>
-      <p class="section-sub">Most-contacted by Shirwal residents.</p>
+      <div class="section-label">Most Contacted</div>
+      <h2 class="section-title">Popular <span class="grad">Services</span></h2>
+      <p class="section-sub">Trusted by Shirwal residents every day.</p>
 
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
         <!-- Tiffin -->
-        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--accent)">
-          <div class="logo-wrap">
+        <article class="glass card-pad popular-card" style="padding-top:1.75rem">
+          <div class="popular-card top-accent" style="background:linear-gradient(90deg,var(--purple),var(--pink))"></div>
+          <div class="svc-icon">
             <img src="assets/logo-tiffin-services.svg" alt="Tiffin Services">
           </div>
-          <h3>Tiffin Services</h3>
-          <p>Home-cooked meals delivered daily. Monthly plans available.</p>
-          <div class="speech-bubble" style="margin-bottom:0.75rem;font-size:0.78rem">🍱 Pickup &amp; delivery · Monthly sub</div>
-          <div class="actions">
-            <a class="btn btn-red" href="vendors.html?service=Tiffin%20Services#service-tiffin">Open Vendor</a>
-            <a class="btn btn-blue" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 Visit Website</a>
+          <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:0.35rem">Tiffin Services</h3>
+          <p style="color:var(--text-2);font-size:0.88rem;margin-bottom:1.1rem;line-height:1.55">Home-cooked meals delivered daily. Monthly plans available.</p>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+            <a class="btn btn-glass btn-sm" href="vendors.html?service=Tiffin%20Services#service-tiffin">View Details</a>
+            <a class="btn btn-sm" style="background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;box-shadow:0 4px 16px rgba(167,139,250,0.3)" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 mess.shirwal.in</a>
           </div>
-          <a class="ext-link" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 mess.shirwal.in ↗</a>
         </article>
 
         <!-- Laundry -->
-        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--accent3)">
-          <div class="logo-wrap">
+        <article class="glass card-pad popular-card" style="padding-top:1.75rem">
+          <div class="popular-card top-accent" style="background:linear-gradient(90deg,var(--cyan),var(--green))"></div>
+          <div class="svc-icon">
             <img src="assets/logo-laundry.svg" alt="Laundry">
           </div>
-          <h3>Laundry</h3>
-          <p>Wash, dry, fold, and ironing. Pickup and delivery available.</p>
-          <div class="speech-bubble blue" style="margin-bottom:0.75rem;font-size:0.78rem">🧺 Same-day available</div>
-          <div class="actions">
-            <a class="btn btn-blue" href="vendors.html?service=Laundry#service-laundry">Open Vendor</a>
-            <a class="btn btn-blue" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 Visit Website</a>
+          <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:0.35rem">Laundry</h3>
+          <p style="color:var(--text-2);font-size:0.88rem;margin-bottom:1.1rem;line-height:1.55">Wash, dry, fold, and ironing. Pickup and delivery available.</p>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+            <a class="btn btn-glass btn-sm" href="vendors.html?service=Laundry#service-laundry">View Details</a>
+            <a class="btn btn-sm" style="background:linear-gradient(135deg,var(--cyan),var(--green));color:#0a0612;box-shadow:0 4px 16px rgba(103,232,249,0.3)" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 laundry.shirwal.in</a>
           </div>
-          <a class="ext-link" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 laundry.shirwal.in ↗</a>
         </article>
 
         <!-- Rickshaw -->
-        <article class="manga-card card-pad service-card" style="border-top: 6px solid var(--yellow); border-top-color: #e6a200">
-          <div class="logo-wrap">
+        <article class="glass card-pad popular-card" style="padding-top:1.75rem">
+          <div class="popular-card top-accent" style="background:linear-gradient(90deg,var(--amber),#f97316)"></div>
+          <div class="svc-icon">
             <img src="assets/logo-rickshaw.svg" alt="Rickshaw">
           </div>
-          <h3>Rickshaw</h3>
-          <p>Quick, affordable local rides around Shirwal at any time.</p>
-          <div class="speech-bubble" style="margin-bottom:0.75rem;font-size:0.78rem">🛺 Available now · Instant booking</div>
-          <div class="actions">
-            <a class="btn btn-yellow" href="vendors.html?service=Rickshaw#service-rickshaw">Open Vendor</a>
-            <a class="btn btn-wa" href="https://wa.me/917066644476?text=Hello%2C%20I%20need%20a%20Rickshaw%20in%20Shirwal." target="_blank" rel="noopener">WhatsApp</a>
+          <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:0.35rem">Rickshaw</h3>
+          <p style="color:var(--text-2);font-size:0.88rem;margin-bottom:1.1rem;line-height:1.55">Quick, affordable local rides around Shirwal at any time.</p>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+            <a class="btn btn-glass btn-sm" href="vendors.html?service=Rickshaw#service-rickshaw">View Details</a>
+            <a class="btn btn-sm" style="background:linear-gradient(135deg,var(--amber),#f97316);color:#0a0612;box-shadow:0 4px 16px rgba(252,211,77,0.3)" href="https://rickshaw.shirwal.in" target="_blank" rel="noopener">🌐 rickshaw.shirwal.in</a>
           </div>
         </article>
 
@@ -133,34 +173,85 @@
     </div>
   </section>
 
-  <hr class="panel-divider">
-
   <!-- HOW IT WORKS -->
-  <section class="section" style="background: var(--paper2)">
+  <section class="section">
     <div class="container">
-      <div class="section-title display">How It Works<span class="underline"></span></div>
-      <p class="section-sub">Four panels. That's all it takes.</p>
+      <div class="section-label">Simple Process</div>
+      <h2 class="section-title">How It <span class="grad">Works</span></h2>
+      <p class="section-sub">Get connected to local services in just a few steps.</p>
       <div class="how-grid">
-        <div class="manga-card how-card">
+        <div class="glass how-card">
           <div class="how-num">01</div>
           <h3>Browse Services</h3>
-          <p>Explore all local services by category or search for what you need.</p>
+          <p>Explore all local services by category or scroll through the full directory.</p>
         </div>
-        <div class="manga-card how-card">
+        <div class="glass how-card">
           <div class="how-num">02</div>
           <h3>View Details</h3>
-          <p>Tap "View Details" on any card to see info and contact options.</p>
+          <p>Tap any service card to see a description and contact options in a pop-up.</p>
         </div>
-        <div class="manga-card how-card">
+        <div class="glass how-card">
           <div class="how-num">03</div>
-          <h3>WhatsApp Instantly</h3>
-          <p>Reach the provider directly with a pre-filled message. No typing needed.</p>
+          <h3>Connect Instantly</h3>
+          <p>Reach the provider on WhatsApp with a pre-filled message — no typing needed.</p>
         </div>
-        <div class="manga-card how-card">
+        <div class="glass how-card">
           <div class="how-num">04</div>
           <h3>Get It Done</h3>
-          <p>Agree on time, price, and delivery — local, fast, and trusted.</p>
+          <p>Agree on time and price locally. Fast, trusted, and always nearby.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PLATFORMS -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-label">Dedicated Platforms</div>
+      <h2 class="section-title">Part of the <span class="grad">Circle</span></h2>
+      <p class="section-sub">Some services have their own dedicated websites within the Shirwal ecosystem.</p>
+      <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+
+        <a href="https://mess.shirwal.in" target="_blank" rel="noopener" class="glass card-pad" style="text-decoration:none;display:flex;align-items:center;gap:1rem">
+          <div class="svc-icon" style="margin-bottom:0;flex-shrink:0"><img src="assets/logo-tiffin-services.svg" alt="Tiffin"></div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:0.2rem">Tiffin / Mess</div>
+            <div style="font-size:0.78rem;color:var(--cyan)">mess.shirwal.in ↗</div>
+          </div>
+        </a>
+
+        <a href="https://laundry.shirwal.in" target="_blank" rel="noopener" class="glass card-pad" style="text-decoration:none;display:flex;align-items:center;gap:1rem">
+          <div class="svc-icon" style="margin-bottom:0;flex-shrink:0"><img src="assets/logo-laundry.svg" alt="Laundry"></div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:0.2rem">Laundry</div>
+            <div style="font-size:0.78rem;color:var(--cyan)">laundry.shirwal.in ↗</div>
+          </div>
+        </a>
+
+        <a href="https://property.shirwal.in" target="_blank" rel="noopener" class="glass card-pad" style="text-decoration:none;display:flex;align-items:center;gap:1rem">
+          <div class="svc-icon" style="margin-bottom:0;flex-shrink:0"><img src="assets/logo-real-estate-properties.svg" alt="Property"></div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:0.2rem">Real Estate</div>
+            <div style="font-size:0.78rem;color:var(--cyan)">property.shirwal.in ↗</div>
+          </div>
+        </a>
+
+        <a href="https://rickshaw.shirwal.in" target="_blank" rel="noopener" class="glass card-pad" style="text-decoration:none;display:flex;align-items:center;gap:1rem">
+          <div class="svc-icon" style="margin-bottom:0;flex-shrink:0"><img src="assets/logo-rickshaw.svg" alt="Rickshaw"></div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:0.2rem">Rickshaw</div>
+            <div style="font-size:0.78rem;color:var(--cyan)">rickshaw.shirwal.in ↗</div>
+          </div>
+        </a>
+
+        <a href="https://shopact.shirwal.in" target="_blank" rel="noopener" class="glass card-pad" style="text-decoration:none;display:flex;align-items:center;gap:1rem">
+          <div class="svc-icon" style="margin-bottom:0;flex-shrink:0"><img src="assets/logo-xerox-printing-doorstep.svg" alt="Shop Act"></div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:0.2rem">Shop Act License</div>
+            <div style="font-size:0.78rem;color:var(--cyan)">shopact.shirwal.in ↗</div>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -170,7 +261,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a class="brand" href="index.html">Shirwal <span style="color:#fff">Circle</span></a>
+          <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
           <p>Your town's digital directory. Connecting Shirwal residents with trusted local businesses.</p>
           <div class="social-row">
             <a href="#" class="social-chip">Instagram</a>
@@ -190,6 +281,7 @@
           <a href="https://mess.shirwal.in" target="_blank" rel="noopener">mess.shirwal.in</a>
           <a href="https://laundry.shirwal.in" target="_blank" rel="noopener">laundry.shirwal.in</a>
           <a href="https://property.shirwal.in" target="_blank" rel="noopener">property.shirwal.in</a>
+          <a href="https://rickshaw.shirwal.in" target="_blank" rel="noopener">rickshaw.shirwal.in</a>
           <a href="https://shopact.shirwal.in" target="_blank" rel="noopener">shopact.shirwal.in</a>
         </div>
       </div>
@@ -197,7 +289,9 @@
     </div>
   </footer>
 
-  <div class="toast" data-ui-toast></div>
-  <script src="js/app.js"></script>
+</div><!-- /page-wrap -->
+
+<div class="toast" data-ui-toast></div>
+<script src="js/app.js"></script>
 </body>
 </html>

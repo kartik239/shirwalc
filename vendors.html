@@ -4,248 +4,261 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Services — Shirwal Circle</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div class="bg-canvas">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+
+<div class="page-wrap">
+
   <nav class="navbar">
     <div class="container">
-      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="vendors.html" class="active">Services</a>
-        <a href="account.html" data-auth="logged-in">Account</a>
-        <a href="login.html" data-auth="logged-out">Login</a>
-        <button data-logout data-auth="logged-in">Logout</button>
+      <div class="navbar-inner">
+        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vendors.html" class="active">Services</a>
+          <a href="account.html" data-auth="logged-in">Account</a>
+          <a href="login.html" data-auth="logged-out">Login</a>
+          <button data-logout data-auth="logged-in">Logout</button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="page-hero">
+  <div class="page-hero" style="padding:3rem 0 2rem">
     <div class="container">
-      <h1>All Local Services <span style="color:var(--accent)">in Shirwal</span></h1>
-      <p class="muted">Tap <strong>View Details</strong> on any card to contact the provider directly on WhatsApp.</p>
+      <div class="section-label">Directory</div>
+      <h1 class="section-title">All Services <span class="grad">in Shirwal</span></h1>
+      <p style="color:var(--text-2);font-size:0.95rem">Tap <strong>View Details</strong> on any card to contact the provider or visit their website.</p>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" style="padding-bottom:5rem">
 
     <!-- QUICK JUMP -->
-    <div class="manga-card jump-panel" style="margin-bottom:2rem">
-      <span style="font-size:0.78rem;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-right:0.5rem">Jump to:</span>
-      <a href="#health" class="jump-chip">🏥 Health</a>
-      <a href="#home-services" class="jump-chip">🏠 Home Services</a>
-      <a href="#real-estate" class="jump-chip">🏘️ Real Estate</a>
-      <a href="#transport" class="jump-chip">🛺 Transport</a>
-      <a href="#govt" class="jump-chip">📋 Govt / Legal</a>
+    <div class="glass jump-panel no-hover" style="margin-bottom:2rem">
+      <span style="font-size:0.75rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-right:0.5rem">Jump:</span>
+      <a href="#health"        class="jump-chip">🏥 Health</a>
+      <a href="#home-services" class="jump-chip">🏠 Home</a>
+      <a href="#real-estate"   class="jump-chip">🏘️ Real Estate</a>
+      <a href="#transport"     class="jump-chip">🛺 Transport</a>
+      <a href="#govt"          class="jump-chip">📋 Govt</a>
     </div>
 
-    <!-- ─── HEALTH ─── -->
+    <!-- ── HEALTH ── -->
     <div class="section-group" id="health">
       <div class="group-title">
-        <span class="icon-badge">🏥</span> Health &amp; Wellness
+        <div class="group-orb orb-purple">🏥</div> Health &amp; Wellness
       </div>
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-doctor.svg" alt="Doctor"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-doctor.svg" alt="Doctor"></div>
           <h3>Doctor</h3>
           <p>Consult experienced local doctors. Home visits on request.</p>
-          <button class="btn btn-red vendor-detail-btn" data-service="Doctor">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Doctor">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-beauty-parlor.svg" alt="Beauty Parlor"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-beauty-parlor.svg" alt="Beauty Parlor"></div>
           <h3>Beauty Parlor</h3>
           <p>Professional grooming for women. Bridal packages available.</p>
-          <button class="btn btn-red vendor-detail-btn" data-service="Beauty Parlor">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Beauty Parlor">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-salon.svg" alt="Salon"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-salon.svg" alt="Salon"></div>
           <h3>Salon</h3>
           <p>Haircuts, styling, shaving, and grooming for men and kids.</p>
-          <button class="btn btn-red vendor-detail-btn" data-service="Salon">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Salon">View Details</button>
         </article>
 
       </div>
     </div>
 
-    <!-- ─── HOME SERVICES ─── -->
+    <!-- ── HOME SERVICES ── -->
     <div class="section-group" id="home-services">
       <div class="group-title">
-        <span class="icon-badge">🏠</span> Home Services
+        <div class="group-orb orb-cyan">🏠</div> Home Services
       </div>
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-electrical-technician.svg" alt="Electrical"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-electrical-technician.svg" alt="Electrical"></div>
           <h3>Electrical Technician</h3>
           <p>Wiring, repairs, switches, fans, and fittings.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Electrical Technician">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Electrical Technician">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-plumbing-work.svg" alt="Plumbing"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-plumbing-work.svg" alt="Plumbing"></div>
           <h3>Plumbing Work</h3>
           <p>Pipe repairs, tap fitting, drainage and bathroom work.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Plumbing Work">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Plumbing Work">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-gas-mechanic.svg" alt="Gas Mechanic"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-gas-mechanic.svg" alt="Gas Mechanic"></div>
           <h3>Gas Mechanic</h3>
           <p>Gas stove repair and cylinder connection at your door.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Gas Mechanic">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Gas Mechanic">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-refrigerator-mechanic.svg" alt="Refrigerator"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-refrigerator-mechanic.svg" alt="Fridge"></div>
           <h3>Refrigerator Mechanic</h3>
           <p>Gas refilling, compressor repair, and cooling fixes.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Refrigerator Mechanic">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Refrigerator Mechanic">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-tv-led-mechanic.svg" alt="TV Mechanic"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-tv-led-mechanic.svg" alt="TV"></div>
           <h3>TV / LED Mechanic</h3>
           <p>Smart TV, LED panel, and set-top box repair at home.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="TV/LED Mechanic">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="TV/LED Mechanic">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-computer-printer-technician.svg" alt="Computer"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-computer-printer-technician.svg" alt="Computer"></div>
           <h3>Computer / Printer Tech</h3>
           <p>Laptop, desktop, and printer repair with data recovery.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Computer/Printer Technician">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Computer/Printer Technician">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-xerox-printing-doorstep.svg" alt="Xerox"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-xerox-printing-doorstep.svg" alt="Xerox"></div>
           <h3>Xerox &amp; Printing</h3>
           <p>Document printing and xerox at your door. Bulk orders welcome.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Xerox & Printing at Doorstep">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Xerox & Printing at Doorstep">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-pest-control.svg" alt="Pest Control"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-pest-control.svg" alt="Pest Control"></div>
           <h3>Pest Control</h3>
           <p>Termite, cockroach, and general pest treatment.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Pest Control">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Pest Control">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-home-cleaning.svg" alt="Home Cleaning"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-home-cleaning.svg" alt="Cleaning"></div>
           <h3>Home Cleaning</h3>
           <p>Deep cleaning by professional teams. Move-in/out specials.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Home Cleaning">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Home Cleaning">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-house-shifting.svg" alt="House Shifting"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-house-shifting.svg" alt="Shifting"></div>
           <h3>House Shifting</h3>
           <p>Safe and affordable shifting with packing service.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="House Shifting">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="House Shifting">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-painting-works.svg" alt="Painting"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-painting-works.svg" alt="Painting"></div>
           <h3>Painting Works</h3>
           <p>Interior and exterior painting with quality materials.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Painting Works">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Painting Works">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card" id="service-laundry" data-service-card="Laundry">
-          <div class="logo-wrap"><img src="assets/logo-laundry.svg" alt="Laundry"></div>
+        <article class="glass card-pad service-card" id="service-laundry" data-service-card="Laundry">
+          <div class="svc-icon"><img src="assets/logo-laundry.svg" alt="Laundry"></div>
           <h3>Laundry</h3>
           <p>Wash, dry, fold, and ironing. Pickup and delivery available.</p>
-          <button class="btn btn-blue vendor-detail-btn" data-service="Laundry">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Laundry">View Details</button>
           <a class="ext-link" href="https://laundry.shirwal.in" target="_blank" rel="noopener">🌐 laundry.shirwal.in ↗</a>
         </article>
 
-        <article class="manga-card card-pad service-card" id="service-tiffin" data-service-card="Tiffin Services">
-          <div class="logo-wrap"><img src="assets/logo-tiffin-services.svg" alt="Tiffin Services"></div>
+        <article class="glass card-pad service-card" id="service-tiffin" data-service-card="Tiffin Services">
+          <div class="svc-icon"><img src="assets/logo-tiffin-services.svg" alt="Tiffin"></div>
           <h3>Tiffin Services</h3>
           <p>Fresh home-cooked meals delivered daily. Monthly subscription.</p>
-          <button class="btn btn-red vendor-detail-btn" data-service="Tiffin Services">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Tiffin Services">View Details</button>
           <a class="ext-link" href="https://mess.shirwal.in" target="_blank" rel="noopener">🌐 mess.shirwal.in ↗</a>
         </article>
 
       </div>
     </div>
 
-    <!-- ─── REAL ESTATE ─── -->
+    <!-- ── REAL ESTATE ── -->
     <div class="section-group" id="real-estate">
       <div class="group-title">
-        <span class="icon-badge">🏘️</span> Real Estate
+        <div class="group-orb orb-amber">🏘️</div> Real Estate
       </div>
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
-        <article class="manga-card card-pad service-card red-accent">
-          <div class="logo-wrap"><img src="assets/logo-real-estate-properties.svg" alt="Real Estate"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-real-estate-properties.svg" alt="Real Estate"></div>
           <h3>Real Estate &amp; Properties</h3>
           <p>Buy, sell, or rent property in Shirwal. Free consultation.</p>
-          <button class="btn btn-red vendor-detail-btn" data-service="Real Estate & Properties">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Real Estate & Properties">View Details</button>
           <a class="ext-link" href="https://property.shirwal.in" target="_blank" rel="noopener">🌐 property.shirwal.in ↗</a>
         </article>
 
       </div>
     </div>
 
-    <!-- ─── TRANSPORT ─── -->
+    <!-- ── TRANSPORT ── -->
     <div class="section-group" id="transport">
       <div class="group-title">
-        <span class="icon-badge">🛺</span> Transport &amp; Travel
+        <div class="group-orb orb-green">🛺</div> Transport &amp; Travel
       </div>
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
-        <article class="manga-card card-pad service-card" id="service-rickshaw" data-service-card="Rickshaw">
-          <div class="logo-wrap"><img src="assets/logo-rickshaw.svg" alt="Rickshaw"></div>
+        <article class="glass card-pad service-card" id="service-rickshaw" data-service-card="Rickshaw">
+          <div class="svc-icon"><img src="assets/logo-rickshaw.svg" alt="Rickshaw"></div>
           <h3>Rickshaw</h3>
           <p>Local auto-rickshaw for quick, affordable rides around Shirwal.</p>
-          <button class="btn btn-yellow vendor-detail-btn" data-service="Rickshaw">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Rickshaw">View Details</button>
+          <a class="ext-link" href="https://rickshaw.shirwal.in" target="_blank" rel="noopener">🌐 rickshaw.shirwal.in ↗</a>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-tours-and-travels.svg" alt="Tours"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-tours-and-travels.svg" alt="Tours"></div>
           <h3>Tours &amp; Travels</h3>
           <p>Sightseeing, outstation trips, and wedding vehicle packages.</p>
-          <button class="btn btn-yellow vendor-detail-btn" data-service="Tours & Travels">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Tours & Travels">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-car-services.svg" alt="Car Services"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-car-services.svg" alt="Car Services"></div>
           <h3>Car Services</h3>
           <p>Polishing, servicing, and minor repairs at your location.</p>
-          <button class="btn btn-yellow vendor-detail-btn" data-service="Car Services">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Car Services">View Details</button>
         </article>
 
-        <article class="manga-card card-pad service-card">
-          <div class="logo-wrap"><img src="assets/logo-car-wash.svg" alt="Car Wash"></div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-car-wash.svg" alt="Car Wash"></div>
           <h3>Car Wash</h3>
           <p>Hand wash, foam wash, and interior cleaning. Doorstep available.</p>
-          <button class="btn btn-yellow vendor-detail-btn" data-service="Car Wash">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Car Wash">View Details</button>
         </article>
 
       </div>
     </div>
 
-    <!-- ─── GOVT / LEGAL ─── -->
+    <!-- ── GOVT ── -->
     <div class="section-group" id="govt">
       <div class="group-title">
-        <span class="icon-badge">📋</span> Govt &amp; Legal
+        <div class="group-orb" style="background:rgba(167,139,250,0.2)">📋</div> Govt &amp; Legal
       </div>
-      <div class="grid vendor-grid">
+      <div class="vendor-grid">
 
-        <article class="manga-card card-pad service-card red-accent">
-          <div class="logo-wrap" style="background:#fff8e0">
-            <img src="assets/logo-xerox-printing-doorstep.svg" alt="Shop Act">
-          </div>
+        <article class="glass card-pad service-card">
+          <div class="svc-icon"><img src="assets/logo-xerox-printing-doorstep.svg" alt="Shop Act"></div>
           <h3>Shop Act License</h3>
           <p>Get your Shop Act License quickly with expert assistance in Shirwal.</p>
-          <button class="btn btn-ink vendor-detail-btn" data-service="Shop Act License">View Details</button>
+          <button class="btn btn-glass btn-sm vendor-detail-btn" data-service="Shop Act License">View Details</button>
           <a class="ext-link" href="https://shopact.shirwal.in" target="_blank" rel="noopener">🌐 shopact.shirwal.in ↗</a>
         </article>
 
@@ -254,29 +267,36 @@
 
   </div><!-- /container -->
 
-  <!-- POPUP MODAL -->
+  <!-- POPUP -->
   <div class="service-modal" data-service-popup hidden>
     <div class="service-modal-backdrop" data-close-popup></div>
-    <section class="manga-card card-pad service-popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" style="padding:2rem">
-      <h2 id="popupTitle" data-popup-title style="font-size:2rem;margin-bottom:0.5rem"></h2>
-      <p data-popup-copy style="color:#444;font-weight:700;line-height:1.65;margin-bottom:0"></p>
+    <section class="glass service-popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-icon">
+        <img data-popup-icon src="" alt="">
+      </div>
+      <h2 id="popupTitle" data-popup-title></h2>
+      <p data-popup-copy></p>
       <div class="popup-actions">
         <a class="btn btn-wa" data-contact-link target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a class="btn btn-blue" data-web-link target="_blank" rel="noopener" style="display:none">🌐 Website</a>
-        <button class="btn btn-white" data-close-popup type="button">✕ Close</button>
+        <a class="btn btn-primary" data-web-link target="_blank" rel="noopener" style="display:none">🌐 Visit Website</a>
+        <button class="btn btn-glass" data-close-popup type="button">Close</button>
       </div>
     </section>
   </div>
 
   <div class="toast" data-ui-toast></div>
 
-  <footer style="background:var(--ink);color:#fff;border-top:4px solid var(--accent);padding:1.5rem 0">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
-      <a class="brand" href="index.html">Shirwal <span style="color:#fff">Circle</span></a>
-      <span style="color:#666;font-size:0.82rem;font-weight:700">© 2025 Shirwal Circle</span>
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
+        <span style="color:var(--text-4);font-size:0.8rem">© 2025 Shirwal Circle</span>
+      </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>

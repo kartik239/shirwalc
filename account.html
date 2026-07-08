@@ -4,34 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account — Shirwal Circle</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-requires-auth="true">
+<div class="bg-canvas">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<div class="page-wrap">
 
   <nav class="navbar">
     <div class="container">
-      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="vendors.html">Services</a>
-        <a href="account.html" class="active" data-auth="logged-in">Account</a>
-        <button data-logout data-auth="logged-in">Logout</button>
+      <div class="navbar-inner">
+        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vendors.html">Services</a>
+          <a href="account.html" class="active" data-auth="logged-in">Account</a>
+          <button data-logout data-auth="logged-in">Logout</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <section class="section">
     <div class="container" style="max-width:560px">
-      <h1 class="section-title display" style="margin-bottom:2rem">My Account<span class="underline"></span></h1>
+      <div class="section-label">Profile</div>
+      <h1 class="section-title" style="margin-bottom:2rem">My <span class="grad">Account</span></h1>
 
-      <div class="manga-card card-pad" style="margin-bottom:1.25rem">
+      <div class="glass card-pad no-hover" style="margin-bottom:1.25rem">
         <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem">
           <div class="avatar" data-user-initial>R</div>
           <div>
-            <div style="font-family:'Bangers',cursive;font-size:1.5rem;letter-spacing:0.04em" data-user-name>Loading…</div>
-            <span class="badge badge-green" style="margin-top:0.3rem">● Active</span>
+            <div style="font-size:1.25rem;font-weight:700;letter-spacing:-0.02em" data-user-name>Loading…</div>
+            <span class="badge badge-green" style="margin-top:0.35rem">● Active</span>
           </div>
         </div>
         <div class="info-row"><span class="lbl">Email</span><span data-user-email>—</span></div>
@@ -39,18 +50,19 @@
         <div class="info-row"><span class="lbl">Address</span><span data-user-address>—</span></div>
       </div>
 
-      <div class="manga-card card-pad" style="margin-bottom:1.25rem">
-        <h2 style="font-size:1.2rem;margin-bottom:1rem">Quick Links</h2>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
-          <a href="vendors.html" class="btn btn-red">Browse Services</a>
+      <div class="glass card-pad no-hover" style="margin-bottom:1.25rem">
+        <div style="font-size:0.82rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Quick Links</div>
+        <div style="display:flex;gap:0.65rem;flex-wrap:wrap">
+          <a href="vendors.html" class="btn btn-primary btn-sm">Browse Services</a>
         </div>
       </div>
 
-      <button data-logout class="btn btn-white" style="border-color:var(--accent);color:var(--accent)">Sign Out</button>
+      <button data-logout class="btn btn-glass btn-sm" style="border-color:rgba(239,68,68,0.3);color:#fca5a5">Sign Out</button>
     </div>
   </section>
 
-  <div class="toast" data-ui-toast></div>
-  <script src="js/app.js"></script>
+</div>
+<div class="toast" data-ui-toast></div>
+<script src="js/app.js"></script>
 </body>
 </html>

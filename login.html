@@ -4,31 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login — Shirwal Circle</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="bg-canvas">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<div class="page-wrap">
 
   <nav class="navbar">
     <div class="container">
-      <a class="brand" href="index.html">Shirwal <span>Circle</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="vendors.html">Services</a>
+      <div class="navbar-inner">
+        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vendors.html">Services</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <section class="section" style="min-height:80vh;display:flex;align-items:center">
+  <section style="min-height:85vh;display:flex;align-items:center;padding:4rem 0">
     <div class="container" style="max-width:420px">
+      <div class="glass card-pad no-hover" style="padding:2.5rem">
 
-      <div class="manga-card card-pad" style="padding:2rem 2rem 2.5rem">
-        <div style="text-align:center;margin-bottom:1.75rem">
-          <div style="font-family:'Bangers',cursive;font-size:2.2rem;letter-spacing:0.05em;text-shadow:3px 3px 0 var(--accent);margin-bottom:0.3rem">
-            Shirwal Circle
-          </div>
-          <div class="speech-bubble" style="font-size:0.82rem">🔐 Sign in to your account</div>
+        <div style="text-align:center;margin-bottom:2rem">
+          <div style="width:64px;height:64px;border-radius:50%;background:conic-gradient(from 0deg,var(--orb-1),var(--orb-2),var(--orb-3),var(--orb-1));display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin:0 auto 1rem;box-shadow:0 0 30px rgba(124,58,237,0.4)">⭕</div>
+          <div style="font-size:1.4rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:0.3rem">Welcome back</div>
+          <div style="color:var(--text-3);font-size:0.88rem">Sign in to your Shirwal Circle account</div>
         </div>
 
         <div id="loginError" class="error-box"></div>
@@ -36,32 +45,29 @@
         <form id="loginForm">
           <div class="form-group">
             <label for="username">Email Address</label>
-            <input id="username" type="email" class="manga-input" placeholder="your@email.com" autocomplete="username" required>
+            <input id="username" type="email" class="glass-input" placeholder="your@email.com" autocomplete="username" required>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input id="password" type="password" class="manga-input" placeholder="••••••••" autocomplete="current-password" required>
+            <input id="password" type="password" class="glass-input" placeholder="••••••••" autocomplete="current-password" required>
           </div>
-          <button type="submit" class="btn btn-red" style="width:100%;padding:0.8rem;font-size:1rem;margin-top:0.5rem">Sign In ↗</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:0.85rem;font-size:0.95rem;margin-top:0.5rem">Sign In</button>
         </form>
 
-        <p class="muted text-center mt-2" style="font-size:0.82rem">
+        <p style="text-align:center;color:var(--text-3);font-size:0.8rem;margin-top:1.25rem">
           Accounts are created by the admin. Contact us on WhatsApp for access.
         </p>
       </div>
-
     </div>
   </section>
 
-  <div class="toast" data-ui-toast></div>
-  <script src="js/app.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      try {
-        const user = JSON.parse(localStorage.getItem('shirwal_circle_user'));
-        if (user) location.href = 'account.html';
-      } catch {}
-    });
-  </script>
+</div>
+<div class="toast" data-ui-toast></div>
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    try { if (JSON.parse(localStorage.getItem('shirwal_circle_user'))) location.href = 'account.html'; } catch {}
+  });
+</script>
 </body>
 </html>
