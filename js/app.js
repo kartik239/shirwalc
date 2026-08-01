@@ -164,6 +164,25 @@ function openServiceFromQuery() {
   }
 }
 
+// ── SCROLL REVEAL ─────────────────────────────────────────────
+function initReveal() {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets = document.querySelectorAll('.section .glass, .section-title, .section-sub, .section-label');
+  if (!targets.length) return;
+  document.documentElement.classList.add('js-reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      el.style.transitionDelay = Math.min(i * 45, 180) + 'ms';
+      el.classList.add('in');
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  targets.forEach(el => { el.classList.add('reveal'); io.observe(el); });
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   requireAuth();
@@ -173,4 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
   bindPopup();
   renderAccount();
   openServiceFromQuery();
+  initReveal();
 });
