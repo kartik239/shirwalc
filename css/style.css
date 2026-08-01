@@ -716,3 +716,11 @@ footer { padding: 4rem 0 2rem; border-top: 1px solid var(--glass-border); margin
 @media (prefers-reduced-motion: reduce) {
   .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
 }
+.btn-tint {
+  background: rgba(167,139,250,0.12);
+  border: 1px solid rgba(167,139,250,0.24);
+  color: #cbb6ff;
+  backdrop-filter: var(--blur-sm);
+  -webkit-backdrop-filter: var(--blur-sm);
+}
+.btn-tint:hover { background: rgba(167,139,250,0.18); border-color: rgba(167,139,250,0.38); color: #e2d6ff; transform: translateY(-1px); }
