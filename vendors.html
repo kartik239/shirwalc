@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>All Services — Shirwal Circle</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#08060e">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,8 +28,9 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-inner">
-        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
-        <div class="nav-links">
+        <a class="brand" href="index.html"><div class="brand-icon">🧿</div> Shirwal Circle</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+        <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="vendors.html" class="active">Services</a>
           <a href="account.html" data-auth="logged-in">Account</a>
@@ -289,7 +294,7 @@
   <footer>
     <div class="container">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
-        <a class="brand" href="index.html"><div class="brand-icon">⭕</div> Shirwal Circle</a>
+        <a class="brand" href="index.html"><div class="brand-icon">🧿</div> Shirwal Circle</a>
         <span style="color:var(--text-4);font-size:0.8rem">© 2025 Shirwal Circle</span>
       </div>
     </div>

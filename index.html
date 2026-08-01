@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Shirwal Circle — One Circle. Every Local Business.</title>
   <meta name="description" content="Browse and contact local services in Shirwal — doctors, tiffin, laundry, repair, and more.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧿</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#08060e">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,7 +39,8 @@
           <div class="brand-icon">🧿</div>
           Shirwal Circle
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+        <div class="nav-links" id="navLinks">
           <a href="index.html" class="active">Home</a>
           <a href="vendors.html">Services</a>
           <a href="account.html" data-auth="logged-in">Account</a>
@@ -55,13 +60,17 @@
           <div class="hero-eyebrow"><span class="dot"></span> Shirwal's Local Marketplace</div>
           <h1>
             One Circle.
-            <span class="line-grad">Every Local Business.</span>
+            <span class="type-wrap" data-typewriter='["Every Local Business.","Tiffin, Fresh Daily.","Repairs, Same Day.","Rides, Any Time.","Every Service Nearby."]'>
+              <span class="type-text">Every Local Business.</span><span class="type-caret" aria-hidden="true"></span>
+            </span>
+            <span class="sr-only">Every local business, tiffin, repairs, rides and every service nearby.</span>
           </h1>
           <p>Discover trusted local services in Shirwal — doctors, tiffin, repairs, transport and more. Connect instantly on WhatsApp.</p>
           <div class="hero-cta">
             <a href="vendors.html" class="btn btn-primary">Explore All Services</a>
-            <a href="#popular" class="btn btn-glass">Popular Near You ↓</a>
+            <a href="#popular" class="btn btn-glass">Popular Near You</a>
           </div>
+          <div class="scroll-cue"><div class="rail"></div>Scroll</div>
         </div>
 
         <!-- Circle visual -->

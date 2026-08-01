@@ -183,6 +183,133 @@ function initReveal() {
   targets.forEach(el => { el.classList.add('reveal'); io.observe(el); });
 }
 
+// ── TYPEWRITER ────────────────────────────────────────────────
+function initTypewriter() {
+  const el = document.querySelector('[data-typewriter]');
+  if (!el) return;
+
+  let phrases = [];
+  try { phrases = JSON.parse(el.dataset.typewriter); } catch (_) {}
+  if (!Array.isArray(phrases) || !phrases.length) return;
+
+  const textEl  = el.querySelector('.type-text');
+  const caretEl = el.querySelector('.type-caret');
+  if (!textEl) return;
+
+  // Reduced motion / no-JS-friendly: just show the first phrase.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    textEl.textContent = phrases[0];
+    return;
+  }
+
+  const TYPE = 62, ERASE = 32, HOLD = 1700, BETWEEN = 420;
+  let p = 0, i = 0, erasing = false, timer = null;
+
+  const typing = on => caretEl && caretEl.classList.toggle('is-typing', on);
+
+  function tick() {
+    const phrase = phrases[p];
+
+    if (!erasing) {
+      i++;
+      textEl.textContent = phrase.slice(0, i);
+      typing(true);
+      if (i >= phrase.length) {
+        erasing = true;
+        typing(false);
+        timer = setTimeout(tick, HOLD);
+        return;
+      }
+      // Slight human jitter so it doesn't feel robotic
+      timer = setTimeout(tick, TYPE + Math.random() * 55);
+    } else {
+      i--;
+      textEl.textContent = phrase.slice(0, i);
+      typing(true);
+      if (i <= 0) {
+        erasing = false;
+        p = (p + 1) % phrases.length;
+        typing(false);
+        timer = setTimeout(tick, BETWEEN);
+        return;
+      }
+      timer = setTimeout(tick, ERASE);
+    }
+  }
+
+  // Pause while the tab is hidden (saves battery on phones)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { clearTimeout(timer); }
+    else { clearTimeout(timer); timer = setTimeout(tick, 400); }
+  });
+
+  timer = setTimeout(tick, 700);
+}
+
+// ── MOBILE NAV ────────────────────────────────────────────────
+function initMobileNav() {
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const links  = document.querySelector('.nav-links');
+  if (!toggle || !links) return;
+
+  const setOpen = (open) => {
+    links.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setOpen(!links.classList.contains('open'));
+  });
+
+  // Close on link tap, outside tap, or Escape
+  links.addEventListener('click', (e) => {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', (e) => {
+    if (!links.classList.contains('open')) return;
+    if (!e.target.closest('.navbar-inner')) setOpen(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+  // Reset when returning to desktop width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 780) setOpen(false);
+  });
+}
+
+// ── NAVBAR CONDENSE ON SCROLL ─────────────────────────────────
+function initNavScroll() {
+  const nav = document.querySelector('.navbar');
+  if (!nav) return;
+  let ticking = false;
+  const update = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+}
+
+// ── POINTER-FOLLOW HIGHLIGHT ──────────────────────────────────
+function initGlassSpotlight() {
+  // Pointer effects are meaningless on touch — skip entirely.
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('.section .glass').forEach(card => {
+    card.classList.add('glass-spot');
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   requireAuth();
@@ -193,4 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAccount();
   openServiceFromQuery();
   initReveal();
+  initTypewriter();
+  initMobileNav();
+  initNavScroll();
+  initGlassSpotlight();
 });
